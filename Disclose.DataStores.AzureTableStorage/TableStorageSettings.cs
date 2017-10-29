@@ -9,13 +9,11 @@ namespace Disclose.DataStores.AzureTableStorage
     public class TableStorageSettings
     {
         public string ConnectionString { get; set; }
-        public string ServersKey { get; set; }
-        public string UsersKey { get; set; }
+        public string TableKey { get; set; }
 
         public TableStorageSettings()
         {
-            ServersKey = "servers";
-            UsersKey = "users";
+            TableKey = "disclosedata";
         }
     }
 }
