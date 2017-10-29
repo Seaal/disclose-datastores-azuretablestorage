@@ -1,7 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Description>An Azure Table Storage implementation of a DataStore for Disclose.</Description>
+    <AssemblyTitle>Disclose.DataStores.AzureTableStorage</AssemblyTitle>
+    <Authors>Seaal</Authors>
     <TargetFramework>netstandard1.3</TargetFramework>
+    <AssemblyName>Disclose.DataStores.AzureTableStorage</AssemblyName>
+    <PackageId>Disclose.DataStores.AzureTableStorage</PackageId>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Seaal/disclose-datastores-azuretablestorage</RepositoryUrl>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
   </PropertyGroup>
 
   <ItemGroup>
