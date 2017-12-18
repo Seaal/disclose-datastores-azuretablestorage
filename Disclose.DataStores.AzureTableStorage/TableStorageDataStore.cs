@@ -48,7 +48,7 @@ namespace Disclose.DataStores.AzureTableStorage
                 return default(TData);
             }
 
-            return (result.Result as DiscloseEntity<TData>).Data;
+            return (result.Result as DiscloseEntity<TData>).Value;
         }
 
         private Task SetData<TData>(ulong id, string key, TData data)

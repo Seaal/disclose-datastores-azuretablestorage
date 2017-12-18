@@ -1,21 +1,29 @@
 ﻿using Microsoft.WindowsAzure.Storage.Table;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Disclose.DataStores.AzureTableStorage
 {
     public class DiscloseEntity<TData> : TableEntity
     {
-        public TData Data { get; set; }
+        [IgnoreProperty]
+        public TData Value {
+            get
+            {
+                return Data == null ? default(TData) : JsonConvert.DeserializeObject<TData>(Data);
+            }
+            set
+            {
+                Data = JsonConvert.SerializeObject(value);
+            }
+        }
+
+        public string Data { get; set; }
 
         public DiscloseEntity(ulong id, string key, TData data)
         {
             PartitionKey = id.ToString();
             RowKey = key;
-            Data = data;
+            Value = data;
         }
 
         public DiscloseEntity() { }

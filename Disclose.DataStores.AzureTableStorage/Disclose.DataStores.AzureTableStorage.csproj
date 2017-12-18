@@ -17,8 +17,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Disclose" Version="0.2.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="WindowsAzure.Storage" Version="8.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Visual Studio 2015\Projects\disclose\src\Disclose\Disclose.csproj" />
   </ItemGroup>
 
 </Project>
